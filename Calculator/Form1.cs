@@ -38,7 +38,7 @@ namespace Calculator
         {
             Button b = (Button)sender;
             operate = b.Text;
-            data = Convert.ToDouble(ResultBox.Text);
+            data = double.Parse(ResultBox.Text, System.Globalization.NumberStyles.AllowDecimalPoint, System.Globalization.NumberFormatInfo.InvariantInfo);
             endinput = true;
             showme.Text = data + " " + operate;
         }
